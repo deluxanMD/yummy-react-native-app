@@ -10,12 +10,12 @@ on:
 jobs:
   #First job
   install-and-test:
-    runs-on: ubuntu-latest
-
     permissions:
-      contents: 'read'
-      id-token: 'write'
-      issues: 'write'
+      checks: write
+      pull-requests: write
+      contents: write
+
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -41,7 +41,7 @@ jobs:
         with:
           coverage-file: ./jest-report.json
           base-coverage-file: ./jest-report.json
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.SECRET_TOKEN }}
           threshold: 90
           annotations: coverage
           skip-step: all
