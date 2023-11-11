@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "test:ci": "jest --json --outputFile=jest-report.json",
+    "test:ci": "jest --coverage --json --outputFile=jest-report.json",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "wdio": "wdio run test/wdio.conf.ts",
     "preci": "rm -fr node_modules",
