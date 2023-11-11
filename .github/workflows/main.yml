@@ -41,7 +41,6 @@ jobs:
         with:
           coverage-file: ./jest-report.json
           base-coverage-file: ./jest-report.json
-          github-token: ${{ secrets.SECRET_TOKEN }}
           threshold: 90
           annotations: coverage
           skip-step: all
