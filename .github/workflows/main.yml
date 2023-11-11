@@ -34,7 +34,9 @@ jobs:
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-script: yarn test:ci
           coverage-file: ./jest-report.json
           base-coverage-file: ./jest-report.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          threshold: 90
+          annotations: coverage
+          skip-step: all
